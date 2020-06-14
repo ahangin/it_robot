@@ -1,0 +1,16 @@
+
+1. Pre make
+
+install cmake before make.
+
+2. make
+
+$ ./make
+
+3. Install
+
+for debain like system
+$ dpkg -i build/Linux/zlog-xxx.deb
+for rpm:
+$ rpm -ivh build/Linux/zlog-xxx.rpm
+
