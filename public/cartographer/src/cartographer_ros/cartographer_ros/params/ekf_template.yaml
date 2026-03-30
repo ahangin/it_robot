@@ -1,0 +1,122 @@
+
+
+
+frequency: 50
+
+silent_tf_failure: false
+
+sensor_timeout: 0.05
+
+two_d_mode: true
+
+transform_time_offset: 0.0
+
+transform_timeout: 0.0
+
+print_diagnostics: true
+
+
+debug: false
+
+
+publish_tf: false
+
+publish_acceleration: false
+
+
+permit_corrected_publication: false
+
+predict_to_current_time: true # 减少感知到的延迟
+
+map_frame: map              # Defaults to "map" if unspecified
+odom_frame: odom            # Defaults to "odom" if unspecified
+base_link_frame: base_link  # Defaults to "base_link" if unspecified
+world_frame: map            # Defaults to the value of odom_frame if unspecified
+
+pose0: /tracked_pose
+pose0_config: [true,  true,  false,
+               false, false, true,
+               false, false, false,
+               false, false, false,
+               false, false, false]
+pose0_differential: false
+pose0_relative: false
+pose0_queue_size: 3
+pose0_rejection_threshold: 2  # Note the difference in parameter name
+pose0_nodelay: true
+
+imu0: /imu/data
+imu0_config: [false, false, false,      # x y z
+              false, false, false,      # roll pitch yaw
+              false, false, false,      # linear velocity
+              true, true, true,       # angular velocity  <-- 角速度  (陀螺)
+              false, false, false]      # linear acceleration <-- 线加速度 (加速计)
+imu0_angular_velocity_covariance: [ 2.852520e-06, 0, 0,  
+                                    0, 4.765390e-05, 0,  
+                                    0, 0, 7.366739e-08 ]
+
+imu0_nodelay: true
+imu0_differential: false
+imu0_relative: false
+imu0_queue_size: 5
+imu0_pose_rejection_threshold: 0.8                 # Note the difference in parameter names
+imu0_twist_rejection_threshold: 0.8                #
+imu0_linear_acceleration_rejection_threshold: 0.8  #
+
+imu0_remove_gravitational_acceleration: true
+
+
+use_control: false
+stamped_control: false
+# The last issued control command will be used in prediction for this period. Defaults to 0.2.
+control_timeout: 0.2
+# Which velocities are being controlled. Order is vx, vy, vz, vroll, vpitch, vyaw.
+control_config: [true, false, false, false, false, true]
+# Places limits on how large the acceleration term will be. Should match your robot's kinematics.
+acceleration_limits: [1.3, 0.0, 0.0, 0.0, 0.0, 3.4]
+# Acceleration and deceleration limits are not always the same for robots.
+deceleration_limits: [1.3, 0.0, 0.0, 0.0, 0.0, 4.5]
+# If your robot cannot instantaneously reach its acceleration limit, the permitted change can be controlled with these
+# gains
+acceleration_gains: [0.8, 0.0, 0.0, 0.0, 0.0, 0.9]
+# If your robot cannot instantaneously reach its deceleration limit, the permitted change can be controlled with these
+# gains
+deceleration_gains: [1.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+
+process_noise_covariance: [
+  1e-5, 0,    0,    0,    0,    0,     0,     0,     0,     0,    0,    0,     0,    0,    0,
+  0,    1e-5, 0,    0,    0,    0,     0,     0,     0,     0,    0,    0,     0,    0,    0,
+  0,    0,    1e-6, 0,    0,    0,     0,     0,     0,     0,    0,    0,     0,    0,    0,
+
+  0,    0,    0,    1e-6, 0,    0,     0,     0,     0,     0,    0,    0,     0,    0,    0,
+  0,    0,    0,    0,    1e-6, 0,     0,     0,     0,     0,    0,    0,     0,    0,    0,
+  0,    0,    0,    0,    0,    1e-5,  0,     0,     0,     0,    0,    0,     0,    0,    0,
+
+  0,    0,    0,    0,    0,    0,     1e-3,  0,     0,     0,    0,    0,     0,    0,    0,
+  0,    0,    0,    0,    0,    0,     0,     1e-3,  0,     0,    0,    0,     0,    0,    0,
+  0,    0,    0,    0,    0,    0,     0,     0,     1e-4,  0,    0,    0,     0,    0,    0,
+
+  0,    0,    0,    0,    0,    0,     0,     0,     0,     1e-4, 0,    0,     0,    0,    0,
+  0,    0,    0,    0,    0,    0,     0,     0,     0,     0,    1e-4, 0,     0,    0,    0,
+  0,    0,    0,    0,    0,    0,     0,     0,     0,     0,    0,    1e-4,  0,    0,    0,
+
+  0,    0,    0,    0,    0,    0,     0,     0,     0,     0,    0,    0,     1e-2, 0,    0,
+  0,    0,    0,    0,    0,    0,     0,     0,     0,     0,    0,    0,     0,    1e-2, 0,
+  0,    0,    0,    0,    0,    0,     0,     0,     0,     0,    0,    0,     0,    0,    1e-2
+]
+initial_estimate_covariance: [10.0, 0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    0,  #x
+                              0,    10.0, 0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    0,  #y
+                              0,    0,    1e-9, 0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    0, #z
+                              0,    0,    0,    1e-9, 0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    0, #r 
+                              0,    0,    0,    0,    1e-9, 0,    0,    0,    0,    0,     0,     0,     0,    0,    0, #p
+                              0,    0,    0,    0,    0,    10.0, 0,    0,    0,    0,     0,     0,     0,    0,    0,  #yaw
+                              0,    0,    0,    0,    0,    0,    1e-9, 0,    0,    0,     0,     0,     0,    0,    0, #vx
+                              0,    0,    0,    0,    0,    0,    0,    1e-9, 0,    0,     0,     0,     0,    0,    0, #vy
+                              0,    0,    0,    0,    0,    0,    0,    0,    1e-9, 0,     0,     0,     0,    0,    0, #vz
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    1e-9,  0,     0,     0,    0,    0, #vr
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     1e-9,  0,     0,    0,    0, #vp
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     1.0,  0,    0,    0, #vy
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     1e-9, 0,    0, #ax
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    1e-9, 0, #ay
+                              0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    1e-9] #az
+

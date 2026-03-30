@@ -1,0 +1,8 @@
+<launch>
+
+    <arg name="project" default="cloud_deskewed"/>
+    <!-- Parameters -->
+    <rosparam file="$(find cloud_deskewed)/config/config.yaml" command="load" />
+    <!-- <node pkg="rs_to_velodyne" type="rs_to_velodyne" name="rs_to_velodyne" output="screen" args="XYZIRT XYZIRT" respawn="true"/> -->
+    <node pkg="cloud_deskewed" type="rs_lidar_deskew"     name="rs_lidar_deskew"      output="screen"     respawn="true"/>
+</launch>

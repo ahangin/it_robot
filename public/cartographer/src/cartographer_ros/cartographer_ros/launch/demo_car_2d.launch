@@ -1,0 +1,37 @@
+
+<launch>
+<!-- 建图模式，设置为false -->
+<param name="/pure_localization" type="bool" value = "false"/>
+  
+    <!--- Run cloud_deskewed -->
+ <!-- <include file="$(find cloud_deskewed)/launch/rs_lidar_deskew.launch" />  -->
+
+<param name="robot_description" textfile="$(find cartographer_ros)/urdf/car.urdf" /> 
+  <node name="robot_state_publisher" pkg="robot_state_publisher"
+    type="robot_state_publisher" /> 
+	
+  <!-- 使用bag的时间戳 -->
+  <param name="/use_sim_time" value="false" />
+
+  <!-- 启动cartographer -->
+  <node name="cartographer_node" pkg="cartographer_ros"
+      type="cartographer_node" args="
+          -configuration_directory $(find cartographer_ros)/configuration_files
+          -configuration_basename yahboomcar_2d.lua"
+      output="screen">
+    <remap from="points2" to="cloud_deskewed" />
+    <!-- <remap from="points2" to="rslidar_points" /> --> 
+    <remap from="scan" to="front_scan" />
+    <remap from="odom" to="odom" />
+    <remap from="imu" to="/imu/data" />
+  </node>
+
+  <!-- 生成ros格式的地图 -->
+  <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
+      type="cartographer_occupancy_grid_node" args="-resolution 0.02" />
+
+  <!-- 启动rviz -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find cartographer_ros)/configuration_files/rviz.rviz" /> -->
+
+</launch>
