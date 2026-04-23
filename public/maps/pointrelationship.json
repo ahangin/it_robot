@@ -1,0 +1,159 @@
+{
+    "array": [
+        {
+            "id1": 1,
+            "id2": 2
+        },
+        {
+            "id1": 2,
+            "id2": 1
+        },
+        {
+            "id1": 2,
+            "id2": 3
+        },
+        {
+            "id1": 3,
+            "id2": 2
+        }
+    ],
+    "infoarray": [
+        {
+            "describe": {
+                "minNode": {
+                    "theta": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                "radius": 0,
+                "type": 0
+            },
+            "id1": {
+                "appointPos": [
+                ],
+                "id": 1,
+                "mapname": "indoor_testParameters.txt",
+                "theta": 0.0164746455848217,
+                "x": -2.0289320945739746,
+                "y": 0.6329159736633301
+            },
+            "id2": {
+                "id": 2,
+                "mapname": "indoor_testParameters.txt",
+                "theta": 0.0164746455848217,
+                "x": 0.00017188323545269668,
+                "y": 0.6663477420806885
+            }
+        },
+        {
+            "describe": {
+                "minNode": {
+                    "theta": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                "radius": 0,
+                "type": 0
+            },
+            "id1": {
+                "appointPos": [
+                ],
+                "id": 2,
+                "mapname": "indoor_testParameters.txt",
+                "theta": 0.0164746455848217,
+                "x": 0.00017188323545269668,
+                "y": 0.6663477420806885
+            },
+            "id2": {
+                "id": 1,
+                "mapname": "indoor_testParameters.txt",
+                "theta": 0.0164746455848217,
+                "x": -2.0289320945739746,
+                "y": 0.6329159736633301
+            }
+        },
+        {
+            "describe": {
+                "minNode": {
+                    "theta": 1.093772351415948e+266,
+                    "x": 1.0609978956e-313,
+                    "y": 2e-322
+                },
+                "radius": 1.0609978956e-313,
+                "type": 0
+            },
+            "id1": {
+                "appointPos": [
+                ],
+                "id": 2,
+                "mapname": "indoor_testParameters.txt",
+                "theta": 0.0164746455848217,
+                "x": 0.00017188323545269668,
+                "y": 0.6663477420806885
+            },
+            "id2": {
+                "id": 3,
+                "mapname": "indoor_testParameters.txt",
+                "theta": 3.130507707595825,
+                "x": 0.00017188300262205303,
+                "y": 0.6663479804992676
+            }
+        },
+        {
+            "describe": {
+                "minNode": {
+                    "theta": 1.093772351415948e+266,
+                    "x": 1.0609978956e-313,
+                    "y": 2e-322
+                },
+                "radius": 1.0609978956e-313,
+                "type": 0
+            },
+            "id1": {
+                "appointPos": [
+                ],
+                "id": 3,
+                "mapname": "indoor_testParameters.txt",
+                "theta": 3.130507707595825,
+                "x": 0.00017188300262205303,
+                "y": 0.6663479804992676
+            },
+            "id2": {
+                "id": 2,
+                "mapname": "indoor_testParameters.txt",
+                "theta": 0.0164746455848217,
+                "x": 0.00017188323545269668,
+                "y": 0.6663477420806885
+            }
+        }
+    ],
+    "nodes": [
+        {
+            "appointPos": [
+            ],
+            "id": 1,
+            "mapname": "indoor_testParameters.txt",
+            "theta": 0.0164746455848217,
+            "x": -2.0289320945739746,
+            "y": 0.6329159736633301
+        },
+        {
+            "appointPos": [
+            ],
+            "id": 2,
+            "mapname": "indoor_testParameters.txt",
+            "theta": 0.0164746455848217,
+            "x": 0.00017188323545269668,
+            "y": 0.6663477420806885
+        },
+        {
+            "appointPos": [
+            ],
+            "id": 3,
+            "mapname": "indoor_testParameters.txt",
+            "theta": 3.130507707595825,
+            "x": 0.00017188300262205303,
+            "y": 0.6663479804992676
+        }
+    ]
+}

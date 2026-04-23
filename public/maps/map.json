@@ -1,0 +1,204 @@
+{
+    "beziers": [
+    ],
+    "lines": [
+        {
+            "id": 18,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 9,
+            "targetID": 1
+        },
+        {
+            "id": 10018,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 1,
+            "targetID": 9
+        },
+        {
+            "id": 19,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 1,
+            "targetID": 2
+        },
+        {
+            "id": 10019,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 2,
+            "targetID": 1
+        },
+        {
+            "id": 20,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 2,
+            "targetID": 3
+        },
+        {
+            "id": 10020,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 3,
+            "targetID": 2
+        },
+        {
+            "id": 21,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 3,
+            "targetID": 4
+        },
+        {
+            "id": 10021,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 4,
+            "targetID": 3
+        },
+        {
+            "id": 22,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 4,
+            "targetID": 5
+        },
+        {
+            "id": 10022,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 5,
+            "targetID": 4
+        },
+        {
+            "id": 23,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 5,
+            "targetID": 6
+        },
+        {
+            "id": 10023,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 6,
+            "targetID": 5
+        },
+        {
+            "id": 24,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 6,
+            "targetID": 7
+        },
+        {
+            "id": 10024,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 7,
+            "targetID": 6
+        },
+        {
+            "id": 25,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 7,
+            "targetID": 8
+        },
+        {
+            "id": 10025,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 8,
+            "targetID": 7
+        },
+        {
+            "id": 26,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 8,
+            "targetID": 9
+        },
+        {
+            "id": 10026,
+            "max_vx": 0.5,
+            "max_wz": 0.3,
+            "sourceID": 9,
+            "targetID": 8
+        }
+    ],
+    "meta": {
+        "origin_x": -101.251,
+        "origin_y": -38.6725,
+        "resolution": 0.05,
+        "timestamp": "2026-03-30T19:41:27",
+        "version": "1.0"
+    },
+    "nodes": [
+        {
+            "id": 1,
+            "locked": true,
+            "x": 9.725999999999999,
+            "y": 8.001999999999995,
+            "yaw": 1.6
+        },
+        {
+            "id": 2,
+            "locked": true,
+            "x": 8.727999999999994,
+            "y": 30.826999999999998,
+            "yaw": 1.6500000000000001
+        },
+        {
+            "id": 3,
+            "locked": true,
+            "x": 7.60499999999999,
+            "y": 49.664,
+            "yaw": 1.7000000000000002
+        },
+        {
+            "id": 4,
+            "locked": false,
+            "x": 4.792000000000002,
+            "y": 69.068,
+            "yaw": 1.6
+        },
+        {
+            "id": 5,
+            "locked": true,
+            "x": 4.046999999999997,
+            "y": 91.36100000000012,
+            "yaw": 1.6
+        },
+        {
+            "id": 6,
+            "locked": true,
+            "x": 24.751999999999995,
+            "y": 91.361,
+            "yaw": 1.6
+        },
+        {
+            "id": 7,
+            "locked": true,
+            "x": 26.313999999999993,
+            "y": 75.909,
+            "yaw": -1.7000000000000002
+        },
+        {
+            "id": 8,
+            "locked": true,
+            "x": 24.357,
+            "y": 59.336,
+            "yaw": -1.8500000000000003
+        },
+        {
+            "id": 9,
+            "locked": true,
+            "x": 16.681999999999988,
+            "y": 36.705,
+            "yaw": -1.7500000000000002
+        }
+    ]
+}
